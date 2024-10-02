@@ -1,2 +1,2 @@
-# TNilCode.github.io
-My hosted site
+# TNil Dev
+The static webpage for my website at tnil.dev

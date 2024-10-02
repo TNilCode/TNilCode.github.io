@@ -1,0 +1,142 @@
+/********************** Global Rules **********************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/********************** Variables **********************/
+
+:root {
+    /* Background Colors */
+    --bg-color: #d7d1c7;
+    --nav-color: #202020;
+    --footer-color: #202020;
+    
+    /* Font */
+    --nav-font-color: #fff;
+    --nav-font-size: 1rem;
+    --nav-font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --article-font-color: #110b04;
+
+    /* Dimensions */
+    --header-height: 8vh;
+    --footer-height: 5vh;
+    --min-article-height: calc(100vh - (var(--header-height) + var(--footer-height)));
+}
+
+/********************** Containers **********************/
+
+body, html, #container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--nav-font-color);
+}
+
+/********************** Header **********************/
+
+#main-header {
+    position: sticky;
+    top: 0;
+}
+
+/********************** Navigation Bar **********************/
+
+#main-nav {
+    width: 100vw;
+    height: var(--header-height);
+    background-color: var(--nav-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 50px 10px #000000;
+    font-family: var(--nav-font-family);
+}
+
+#nav-logo {
+    height: var(--header-height);
+    width: var(--header-height);
+    user-select: none;
+}
+
+#left-nav, #right-nav {
+    width: 50vw;
+}
+
+#right-nav {
+    display: flex;
+    align-items:end;
+    flex-direction: column-reverse;
+    padding-right: 2em;
+}
+
+#nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    color: #fff;
+    margin-left: 3em;
+    font-size: var(--nav-font-size);
+}
+
+
+/********************** Article **********************/
+
+#main-article {
+    width: 100vw;
+    min-height: var(--min-article-height);
+    color: var(--article-font-color);
+    padding: 3rem;
+}
+
+.article-section{
+    margin: 2rem 0rem;
+    text-align: center;
+}
+
+.job-section {
+    margin: 1rem 1rem ;
+}
+
+.arrow {
+    font-size: 2rem;
+}
+
+.selfie {
+    width: 300px;
+    border-radius: 30px;
+}
+
+.cover-page {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.contact-info {
+    text-align: right;
+    margin-left: 5rem;
+}
+
+.article-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/********************** Footer **********************/
+
+#main-footer {
+    width: 100vw;
+    height: var(--footer-height);
+    background-color: var(--footer-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
