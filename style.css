@@ -179,6 +179,15 @@ body, html, #container {
     margin-bottom: 1rem;
 }
 
+.resume-iframe{
+    width: 54vw;
+    height: 100%;
+}
+
+#resume {
+    height: 100vh;
+}
+
 /********************** Footer **********************/
 
 #main-footer {
