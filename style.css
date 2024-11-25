@@ -31,7 +31,7 @@
 /********************** Containers **********************/
 
 body, html, #container {
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     background-color: var(--bg-color);
     color: var(--nav-font-color);
@@ -59,24 +59,29 @@ body, html, #container {
 /********************** Navigation Bar **********************/
 
 #main-nav {
-    width: 100vw;
+    /* width: 100vw; */
     height: var(--header-height);
     background-color: var(--nav-color);
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     box-shadow: 0px 0px 50px 10px #000000;
     font-family: var(--nav-font-family);
 }
 
 #nav-logo {
-    height: var(--header-height);
-    width: var(--header-height);
+    /* height: var(--header-height);
+    width: var(--header-height); */
     user-select: none;
 }
 
-#left-nav, #right-nav {
-    width: 50vw;
+#left-nav {
+    width: 50%;
+    margin-right: 20px;
+}
+
+#right-nav {
+    width: 50%;
 }
 
 #right-nav {
@@ -146,7 +151,10 @@ body, html, #container {
 }
 
 .selfie {
-    width: 300px;
+    object-fit: contain;
+    max-width: 20vw;
+    height: auto;
+    width: auto;
     border-radius: 30px;
 }
 .article-section {
@@ -197,4 +205,45 @@ body, html, #container {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#hamburger-menu {
+    visibility: hidden;
+}
+
+/* Hide the nav links and show the hamburger menu on small screens */
+@media (max-width: 768px) {
+    #nav-links {
+        display: none; /* Hide the navigation links */
+        flex-direction: column;
+        background-color: var(--nav-color);
+        position: absolute;
+        top: var(--header-height);
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #nav-links.active {
+        display: flex; /* Show the navigation links when active */
+    }
+
+    #hamburger-menu {
+        display: block; /* Show the hamburger icon */
+        visibility: visible;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        margin-right: 5px;
+    }
+
+    #right-nav {
+        padding-right: 1rem; /* Adjust padding for better spacing */
+    }
 }
