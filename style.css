@@ -196,6 +196,14 @@ body, html, #container {
     height: 100vh;
 }
 
+.contact-link:visited {
+    color:blue;
+}
+
+.contact-link:hover {
+    color: red;
+}
+
 /********************** Footer **********************/
 
 #main-footer {
